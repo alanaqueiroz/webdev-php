@@ -1,0 +1,107 @@
+<html>
+	<head>
+		<title>Formulario</title>
+		<link href="./estilo.css" rel="stylesheet" type="text/css" media="all">
+		<style type="text/css" media="all">
+			body {
+				text-align: center;
+			}
+			.tableformulario {
+				background: #EBE9ED;
+			}
+			.tableformulario h3 {
+				text-align: right;
+				font-weight: normal;
+			}
+			#botaosubmit {
+				background: #7D9FC7;
+				color: #ffffff;
+			}
+			#botaoreset {
+				background: #526E9E;
+				color: #ffffff;
+			}
+		</style>
+	</head>
+	<body>
+		<form>
+			<input type="hidden" name="cadastro" value="sim">
+			<table class="tableformulario">
+				<th colspan="2">
+					<h1><strong>Formulario de Cadastro<strong><h1>
+				</th>
+				<tr>
+					<td>
+						<strong>Nome:</strong>
+					</td>
+					<td>
+						<input type="text" name="nome" value="" maxlength="20" class="inputStyle">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<strong>Sexo:</strong>
+					</td>
+					<td>
+						<input type="radio" name="sexo" value="masculino" checked>Masculino
+						<input type="radio" name="sexo" value="feminino">Feminino
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<strong>Maior de Idade:</strong>
+					</td>
+					<td>
+						<input type="radio" name="maior" value="sim">Sim
+						<input type="radio" name="maior" value="nao" checked>Nao
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<strong>Formacao:</strong>
+					</td>
+					<td>
+						<select name="formacao" class="inputStyle">
+							<option value="">Selecione uma formacao</option>
+							<option value="graduacao">Graduacao</option>
+							<option value="mestrado">Mestrado</option>
+							<option value="doutorado">Doutorado</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<strong>Casado(a):<strong>
+					</td>
+					<td>
+						<input type="checkbox" name="casado" value="sim" checked>Sim
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<strong>Possui Carro:<strong>
+					</td>
+					<td>
+						<input type="checkbox" name="carro" value="sim">Sim
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<strong>Comentario:<strong>
+					</td>
+					<td>
+						<textarea name="comentario" rows="5" class="inputStyle"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="submit" name="enviar" value="Enviar" id="botaosubmit">
+					</td>
+					<td>
+						<input type="reset" name="voltar" value="Voltar a Configuracao" id="botaoreset">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
