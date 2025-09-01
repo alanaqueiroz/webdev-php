@@ -12,7 +12,6 @@
         }
     </style>
     <script language="javascript" type="text/javascript">
-        <!--
         function showPhone(itemid) {
             try {
                 xmlhttp = new XMLHttpRequest();
