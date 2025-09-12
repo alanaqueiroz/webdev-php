@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 05/09/2025 às 02:19
+-- Tempo de geração: 12/09/2025 às 03:10
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.1.25
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `web`
+-- Banco de dados: `sistema`
 --
 
 -- --------------------------------------------------------
@@ -95,6 +95,18 @@ INSERT INTO `item` (`id`, `name`, `phone`, `click`) VALUES
 (14, 'Item 14', '0000-0014', 0),
 (15, 'Item 15', '0000-0015', 0);
 
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `prod`
+--
+
+CREATE TABLE `prod` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(250) NOT NULL,
+  `preco` decimal(10,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 --
 -- Índices para tabelas despejadas
 --
@@ -118,6 +130,12 @@ ALTER TABLE `item`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Índices de tabela `prod`
+--
+ALTER TABLE `prod`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT para tabelas despejadas
 --
 
@@ -138,6 +156,12 @@ ALTER TABLE `client`
 --
 ALTER TABLE `item`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT de tabela `prod`
+--
+ALTER TABLE `prod`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

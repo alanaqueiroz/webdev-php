@@ -6,7 +6,7 @@ include("../header.php");
 include("./menu.php");
 ?>
 
-ADMIN
+<h3>ADMIN</h3>
 
 <?php
 include("../footer.php");
