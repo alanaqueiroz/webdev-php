@@ -15,6 +15,8 @@ include("../menu.php");
     <tr>
         <th>Nome</th>
         <th>Preço</th>
+        <th>EDITAR</th>
+        <th>APAGAR</th>
     </tr>
     <?php
     $link = mysqli_connect("localhost","root","","sistema");
@@ -24,7 +26,8 @@ include("../menu.php");
         ?>
         <tr>
             <td><?=$row["nome"];?></td>
-            <td><?=$row["preco"];?></td>
+            <td><a href="/sistema/admin/prod/upd.php?=<?=$row["id"];?>"style="color: black;">editar</a></td>
+            <td><a href="/sistema/admin/prod/del.php?=<?=$row["id"];?>"style="color: black;">apagar</a></td>
         </tr>
         <?php
     }

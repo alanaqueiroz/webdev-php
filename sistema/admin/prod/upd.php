@@ -3,6 +3,32 @@
     include("../session.php");
     validaSessao();
  
+    //abaixo
+    $id = "";
+    if(($GET["id"]).$id = $GET["id"]);
+    elseif($POST["id"]) $id = $POST["id"];
+ 
+     IF(!$id)
+    {
+        header("Location: /sistema/admin/prod");
+        exit;
+    }
+   
+    $link = mysqli_connect("localhost", "root", "", "sistema");
+    $sql = "";
+    $sql .= "SELECT * FROM prod WHERE id = '".$id."';";
+    $result = mysqli_query($link, $sql);
+ 
+    if(mysqli_num_rows($result) == 0)
+    {
+        header("Location: /sistema/admin/prod");
+        exit;
+    }
+    $row = mysqli_fetch_assoc($result);
+    extract($row);
+ 
+    //acima
+ 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         extract($_POST);
         $error = "";
@@ -14,11 +40,7 @@
         }
         if(!$error){
             $link = mysqli_connect("localhost", "root", "", "sistema");
-            $sql = "";
-            $sql .= " INSERT INTO prod ";
-            $sql .= " (nome, preco) ";
-            $sql .= " VALUES ";
-            $sql .= "('".$nome."', '".$preco."')";
+            $sql = "UPDATE prod SET nome = '".$nome."', preco = '".$preco."' WHERE id = '".$id."';";
             $result = mysqli_query($link, $sql);
             header("Location: /sistema/admin/prod");
             exit;
@@ -26,7 +48,7 @@
     }
 ?>
  
-<h3>ADICIONAR PRODUTO</h3>
+<h3>EDITAR PRODUTO</h3>
  
 <form method = "POST">
     <table>
@@ -45,7 +67,7 @@
             </td>
         <tr>
             <td colspan="2" style="text-align: center;">
-                <input type="submit" name="submit" value="Cadastrar">
+                <input type="submit" name="submit" value="Editar">
             </td>
         </tr>
     </table>
