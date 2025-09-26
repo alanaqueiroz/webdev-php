@@ -2,7 +2,7 @@
     include("../config.inc.php");
     include("../session.php");
     validaSessao();
- 
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         extract($_POST);
         $error = "";
@@ -25,21 +25,21 @@
         }
     }
 ?>
- 
+
 <h3>ADICIONAR PRODUTO</h3>
- 
+
 <form method = "POST">
     <table>
         <tr>
             <td style="text-align: right;">Nome:</td>
-            <td>
+            <td> 
                 <input type="text" name="nome" value="<?=isset($nome) ?$nome:""?>">
             </td>
             </td>
         <tr>
         <tr>
             <td style="text-align: right;">Nome:</td>
-            <td>
+            <td> 
                 <input type="text" name="preco" value="<?=isset($preco) ?$preco:""?>">
             </td>
             </td>
@@ -50,7 +50,8 @@
         </tr>
     </table>
 </form>
- 
+
 <?php
     include("../../footer.php");
 ?>
+
