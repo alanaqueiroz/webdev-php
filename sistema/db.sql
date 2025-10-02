@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 12/09/2025 às 03:10
+-- Tempo de geração: 03/10/2025 às 01:11
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.1.25
 
@@ -108,6 +108,13 @@ CREATE TABLE `prod` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Despejando dados para a tabela `prod`
+--
+
+INSERT INTO `prod` (`id`, `nome`, `preco`) VALUES
+(1, 'caderno', 12.30);
+
+--
 -- Índices para tabelas despejadas
 --
 
@@ -161,7 +168,7 @@ ALTER TABLE `item`
 -- AUTO_INCREMENT de tabela `prod`
 --
 ALTER TABLE `prod`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
